@@ -5,6 +5,7 @@
 :root {
     --fonte0: 'passion one', 'cursive';
     --fonte1: 'Sriracha', Verdana, sans-serif;
+    --fonte2: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 * {
@@ -15,12 +16,15 @@
     margin-right: auto;
 }
 
+html, body {
+    font-family: var(--fonte2);
+}
+
 header {
     padding: 3em 0%;    
     text-align: center;    
     color: white;
     background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
 }
 
@@ -72,15 +76,16 @@ div {
     padding: 10vh 0px;
     min-height: 285px;
     margin: 10% 0px;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.418);
 }
 
 .flor {
-    background-image: url("imagens/background001.jpg");
-    background-position: right;
+    background-image: url("../imagens/background001.jpg");
+    background-position: right center;
 }
 
 .livro {
-    background-image: url("imagens/background002.jpg");
+    background-image: url("../imagens/background002.jpg");
     background-position: left;
 }
 
