@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilo/style.css" media="all">
+    <link rel="stylesheet" href="estilo/mediaquery.css">
+</head>
+<body>
+    <header>
+        <h1>Meu Site</h1>
+        <span id="burger" class="material-icons" onclick="clickMenu()">menu</span>
+        <nav id="itens">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>Testando Media Queries</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti doloribus dicta aspernatur qui nihil? Aspernatur numquam eos eligendi, facere impedit voluptatum, vero nihil, laudantium voluptas corporis perferendis dolore autem aliquam esse tenetur rem dignissimos excepturi quisquam iusto? At amet doloribus, error illum doloremque esse earum eaque similique nemo laboriosam perspiciatis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias animi veritatis totam amet in ab rerum odit beatae sunt placeat, error, nobis deserunt optio porro facere illum reiciendis repellendus laudantium fuga, perspiciatis culpa molestiae libero! Excepturi error cumque quae cupiditate tempora ipsum aperiam quia nihil? Placeat quisquam a quae fugit.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur cumque expedita amet voluptates quo, consectetur dolore molestias modi voluptatum itaque numquam repellendus, at asperiores vero obcaecati perferendis praesentium iusto ratione illo inventore. Repudiandae quia nemo dolor temporibus dolores! Ipsum voluptate dignissimos perferendis recusandae sunt odit laboriosam! Soluta ex cum quod?</p>
+        </article>
+    </main>
+    <script>
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+
+// Para fazer o menu usando apenas CSS:
+
+// Envelopa menu em um <label></label> e conecta ele em um input[Type="Checkbox"].
+// Com isso feito em HTML podemos passar para o CSS; Caso o input[checkbox] estiver checado ele abrira o menu.
+// EX:
+
+// HTML:
+// <input type="checkbox" id="input_01">
+// <label for="input_01">
+//          <menu>
+//                   /*itens*/
+//          </menu>
+// </label>
+
+// CSS:
+// input[type="checkbox"]:checked  ~ header menu {
+//       display: block; 
+// }
+    </script>
+</body>
+</html>
