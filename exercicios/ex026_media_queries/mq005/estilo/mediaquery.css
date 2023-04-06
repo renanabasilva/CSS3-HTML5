@@ -1,1 +1,24 @@
 @charset "UTF-8";
+
+@media screen and (min-width: 768px) {
+
+    span#burger {
+        display: none;        
+    }
+    
+    nav {
+        display: block;
+    }
+
+    nav li {
+        display: inline-block;
+    }
+
+    nav a {
+        border-top: none;
+    }
+
+    main {
+        width: 691px;
+    }
+}
