@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+  /* .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .menu li {
+    position: relative;
+    flex: 1;
+    width: 120px;
+  }
+  
+  .menu li a {
+    display: block;
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .menu li:hover > a {
+    background-color: #555;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background-color: #555;
+    list-style: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .menu li:hover > .submenu {
+    display: block;
+    opacity: 1;
+  }
+  
+  .submenu li {
+    position: relative;
+  }
+  
+  .submenu li a {
+    display: block;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .submenu li:hover > a {
+    background-color: #777;
+  }
+  
+  .menu li.active > a {
+    background-color: #555;
+  }
+  
+  .submenu li.active > a {
+    background-color: #777;
+  }
+   */
+
+/* GEPETO 1 */
+
+.menu {
+    width: 100%;    
+    text-align: center;
+}
+  
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+  }
+  
+  .menu li {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 5px;
+    color: black;
+    width: 120px;
+    font-size: 1.2em;    
+    text-decoration: none; 
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out; 
+  }
+
+  .menu a:hover {
+    font-weight: 600;
+    color: rgb(102, 28, 28);
+    background-color: var(--color1);    
+    box-shadow: 0 4PX 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  /* Estilo dos submenus */
+.menu .submenu {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    margin-top: -5px;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: aqua;
+    transition: all 0.2s ease-in-out; /* Adiciona a transição de fade in e fade out */   
+}
+  
+.menu .submenu li {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu .submenu a {
+    display: block;
+    padding: 10px 15px;
+    color: #161515;
+    text-decoration: none;
+  }
+  
+  /* Mostra os submenus ao passar o mouse e adiciona o efeito de fade in  */
+  .menu li:hover > .submenu {
+    opacity: 1;
+    visibility: visible;
+  }
+
+    nav .anim.active > a,
+    nav .anim:hover > a {
+        background-color: #693232;
+        color: #000;
+    }
+
+    nav .anim.active:hover > a {
+        background-color: #683b3b;
+      }
+      
+      nav .anim.active .submenu {
+        display: block;
+      } 
+
+
+
+
+      /* --- ORIGINAL --- */
+
+/* nav > ul {
+    list-style: none;
+}
+
+nav > ul > li{
+    position: relative;
+    display: inline-block;
+}
+
+header > nav a {
+    display: block;
+    padding: 5px 25px;
+    margin: 0px 10px;
+    width: 120px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: black; 
+    transform: translateX(0px);
+    transition: transform, box-shadow, 0.2s ease-out;
+}
+
+nav > ul > li a:hover {
+    background-color: var(--color1);
+    border-radius: 5px;
+    box-shadow: 0 4PX 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    font-weight: 600;
+    transform: translateX(0px);
+    transition: transform, box-shadow, 0.2s ease-in;
+}
+
+ul ul{
+    list-style: none;
+    position: absolute;
+    width: 150px;
+    margin-top: -5px;
+    margin-left: 10px;
+    top: 100%;
+    display: none;
+    background-color: var(--color1);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 5px 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+ul ul li {
+    margin-left: -10px;
+}
+
+ul ul a {
+    color: white;
+}
+
+ul li:hover > ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+} */
+    </style>
+</head>
+<body>
+    <header>
+        <div id="email">
+            <h2>jupmcontact@gmail.com</h2>
+        </div>
+        <div id="banner">
+            <h1>Julie Passanezi</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">storyboard</a></li>
+                <li><a href="#">illustration</a></li>
+                <li><a href="#" class="anim">animation</a>
+                    <ul class="submenu">
+                        <li><a href="#">characters</a></li>
+                        <li><a href="#">backgrounds</a></li>
+                        <li><a href="#">props</a></li>
+                        <li><a href="#">animations</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">pixel art</a></li>
+                <li><a href="#">projects</a></li>
+                <li><a href="#">about</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

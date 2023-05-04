@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exemplo de Grade de Imagens</title>
+	<style type="text/css">
+		body {
+			background-color: #f2fffc;
+		}
+
+		main {
+			margin: 30px;
+		}
+
+		main > div.images {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin: auto;
+			max-width: 1500px;
+		}
+
+		div.block {
+			flex: 1 1 auto;
+			max-width: 500px;
+			border-radius: 10px;
+			margin: 5px;
+			background-color: rgb(255, 255, 255);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+
+		.block > img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<div class="images">
+			<div class="block"><img src="https://via.placeholder.com/400x400"></div>
+			<div class="block"><img src="https://via.placeholder.com/800x600"></div>
+			<div class="block"><img src="https://via.placeholder.com/300x500"></div>
+			<div class="block"><img src="https://via.placeholder.com/400x300"></div>
+			<div class="block"><img src="https://via.placeholder.com/500x200"></div>
+			<div class="block"><img src="https://via.placeholder.com/200x400"></div>
+			<div class="block"><img src="https://via.placeholder.com/600x600"></div>
+			<div class="block"><img src="https://via.placeholder.com/300x300"></div>
+			<div class="block"><img src="https://via.placeholder.com/400x400"></div>
+			<div class="block"><img src="https://via.placeholder.com/500x500"></div>
+		</div>
+	</main>
+</body>
+</html>
