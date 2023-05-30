@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+body{
+  max-width:1024px;
+  min-height:100vh;
+  padding:0;
+  margin:0 auto;
+  background:#22A8FF;
+  font-family: 'Rubik', sans-serif;
+}
+.title{
+ text-align:center;
+  font-size:42px;
+  padding:1em 0;
+  color:white;
+}
+img{
+  display:block;
+  max-width:100%;
+  object-fit:cover;
+  border-radius:.5em;
+  box-shadow:2px 2px 9px rgba(0,0,0,0.6);
+}
+.mansory-gallery{
+ 	column-gap: .9em;
+  column-count:2;
+  & .gallery-item{
+    margin:.9em 0;
+  }
+}
+
+@media (min-width: 700px) {
+  .mansory-gallery{
+    column-count:4;
+  }
+}
+    </style>
+</head>
+<body>
+    <div>
+        <h2 class="title">Mansory with only CSS<h2>
+      </div>
+      <div class="mansory-gallery">
+        <div class="gallery-item"><img src="https://source.unsplash.com/random/460x464" alt=""></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/random/500x362" alt=""></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/random/400x362" alt=""></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/random/400x400" alt=""></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/random/420x668" alt=""></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/random/500x568" alt=""></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/random/500x369" alt=""></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/random/500x365" alt=""></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/random/500x366" alt=""></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/random/500x367" alt=""></div>
+      </div>
+</body>
+</html>

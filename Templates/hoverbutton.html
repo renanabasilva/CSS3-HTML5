@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+    }
+
+    .image {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background-color: #ccc;
+      margin-right: 20px;
+    }
+
+    .text {
+      flex: 1;
+      background-color: #eee;
+      padding: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .image {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="text">
+    <h1>Exemplo de texto</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis nibh tincidunt, ultricies lectus eu, varius arcu. Nulla facilisi. Suspendisse et purus a turpis venenatis volutpat. Ut efficitur volutpat metus. Integer elementum faucibus leo, nec luctus odio volutpat ac. Sed efficitur auctor aliquet. Phasellus faucibus est non sem condimentum, a ullamcorper quam ultricies.</p>
+  </div>
+  <div class="image"></div>
+</div>
+
+</body>
+</html>

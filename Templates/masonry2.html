@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+  margin-top: 100px;
+  font-family: 'Trebuchet MS', serif;
+  line-height: 1.6
+}
+
+.celebrity-image-gallery img{
+
+	margin-bottom:20px;
+}
+.celebrity-image-gallery{
+	cursor: pointer;
+}
+
+/* .masonry-container{
+  
+} */
+
+.celebrity-bio-inner .nav-tabs{
+  margin-bottom:20px;
+}
+
+img{
+  width:100%;
+}
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav-tabs ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.nav-tabs li{
+  padding:10px 15px;
+  display:inline-block;
+}
+.nav-tabs{
+  cursor:pointer;
+}
+
+.current-tab{
+  background: #ededed;
+	color: #222;
+}
+
+.tab-content{
+  display: none;
+  background: #ededed;
+  padding: 15px;
+}
+
+.current-tab{
+  display: inherit;
+}
+
+/*jQuery Lightbox*/
+ #overlay{
+   background:rgba(0,0,0,0.7);
+   width:100%;
+   height:100%;
+   position:fixed;
+   top:0;
+   left:0;
+   display:none;
+   text-align:center;
+ }
+ #overlay img{
+   position: absolute;
+   top: 50%;
+   max-width: 70%;
+   max-height:70%;
+   transform: translateY(-50%);
+   
+   left:0;
+   right:0;
+   margin:0 auto;
+ }
+    </style>
+</head>
+<body>
+    <div class="container">
+  
+        <div class="nav-tabs">
+          <ul>
+            <li class="current-tab" data-tab="tab-1">Tab 1</li>
+            <li data-tab="tab-2">tab 2</li>      
+          </ul>
+        </div><!-- /nav-tabs -->
+        
+        <div class="tabs">
+            <div id="tab-1" class="tab-content current-tab">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias iusto quidem cupiditate beatae ea at, blanditiis excepturi quibusdam, vitae eos culpa ipsum veritatis. Saepe dolorum expedita natus ex, iste debitis.
+            </div>
+            <div id="tab-2" class="tab-content">
+                <div class="masonry-gallery">
+                    <div class="row">
+                        <div class="masonry-container">
+                            <div class="celebrity-image-gallery col-md-4 col-sm-6 col-xs-12">
+                            <img src="http://static.celebuzz.com/uploads/2015/11/selena-gomez-instyle-1.jpg">
+                            </div>
+                            <div class="celebrity-image-gallery col-md-4 col-sm-6 col-xs-12">
+                            <img src="http://www.billboard.com/files/styles/article_main_image/public/media/selena-gomez-bb30-2015-billboard-07-650.jpg">
+                            </div>
+                            <div class="celebrity-image-gallery col-md-4 col-sm-6 col-xs-12">
+                            <img src="http://cdn02.cdn.justjared.com/wp-content/uploads/headlines/2015/07/selena-gomez-announces-album-title-release-date.jpg">
+                            </div>
+                            <div class="celebrity-image-gallery col-md-4 col-sm-6 col-xs-12">
+                            <img src="https://i1.mirror.co.uk/incoming/article7382007.ece/ALTERNATES/s615b/Singer-Selena-Gomez-arrives-at-the-58th-Annual-GRAMMY-Awards.jpg">
+                            </div>
+                            <div class="celebrity-image-gallery col-md-4 col-sm-6 col-xs-12">
+                            <img src="http://cdn01.cdn.justjaredjr.com/wp-content/uploads/headlines/2016/02/selena-gomez-surprises-fans-at-hillsong-concert.jpg">
+                            </div>
+                            <div class="celebrity-image-gallery col-md-4 col-sm-6 col-xs-12">
+                            <img src="http://images.hngn.com/data/thumbs/full/47684/650/0/0/0/selena-gomez.jpg">
+                            </div>
+                            <div class="celebrity-image-gallery col-md-4 col-sm-6 col-xs-12">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Selena_Gomez_-_Walmart_Soundcheck_Concert.jpg">
+                            </div>
+                            <div class="celebrity-image-gallery col-md-4 col-sm-6 col-xs-12">
+                            <img src="http://www.radioone.world/wp-content/uploads/2016/02/selena-2.jpg">
+                            </div>
+                            <div class="celebrity-image-gallery col-md-4 col-sm-6 col-xs-12">
+                            <img src="http://i1.imgiz.com/rshots/7894/selena-gomez-the-heart-wants-what-it-wants_7894849-0153_1280x720.jpg">
+                            </div>
+                            <div class="celebrity-image-gallery col-md-4 col-sm-6 col-xs-12">
+                            <img src="http://newscult.com/wp-content/uploads/2015/10/Screen-Shot-2015-10-08-at-10.19.12-AM-3.jpg">
+                            </div>
+                        </div><!-- /masonrty -->
+                    </div><!-- /row -->
+                </div><!-- /masonry-gallery -->
+            </div>
+        </div><!-- /tabs --> 
+    </div><!-- /container -->
+    <script>
+document.querySelector(document).ready(function () {
+  document.querySelector(".nav-tabs li").click(function () {
+    var tab_id = document.querySelector(this).attr("data-tab");
+
+    document.querySelector(".tabs div").classList.remove("current-tab");
+    document.querySelector(".nav-tabs li").classList.remove("current-tab");
+
+    document.querySelector(this).classList.add("current-tab");
+    document.querySelector("#" + tab_id).classList.add("current-tab");
+  });
+
+  //Masonry Layout
+  document.querySelector(".masonry-container").masonry({
+    itemSelector: ".celebrity-image-gallery",
+    columnWidth: ".col-md-4",
+    percentPosition: true
+  });
+  document.querySelector("li[data-tab=tab-2]").click(function () {
+    document.querySelector(".masonry-container").masonry("layout");
+  });
+
+  //Lightbox Gallery
+  var $overlay = document.querySelector('<div id="overlay"></div>');
+  var nextBtn = document.querySelector('<div class="btn btn-success next-btn">Next</div>');
+  var prevBtn = document.querySelector('<div class="btn btn-success prev-btn">Prev</div>');
+  var $image = document.querySelector("<img>");
+
+  $overlay.insertAdjacentHTML("beforeend",prevBtn);
+  $overlay.insertAdjacentHTML("beforeend",nextBtn);
+  $overlay.insertAdjacentHTML("beforeend",$image);
+
+  document.body.insertAdjacentHTML("beforeend",$overlay);
+
+  document.querySelector(".gallery-item img").click(function () {
+    document.querySelector($overlay).show();
+    document.querySelector(nextBtn).show();
+    document.querySelector(prevBtn).show();
+
+    var imageLoad = document.querySelector(this).attr("src");
+    $image.attr("src", imageLoad);
+
+    //Pagination Slider
+    document.querySelector("#overlay .celebrity-image-gallery").each(function (e) {
+      if (e != 0) document.querySelector(this).hide();
+    });
+
+    document.querySelector(nextBtn).click(function () {
+      var $images = document.querySelector(".masonry-container img"); // A list of the images in your gallery.
+      var $currentImg = document.querySelector(
+        '.masonry-container img[src="' + document.querySelector("#overlay img").attr("src") + '"]'
+      ); // The current img being overlayed.
+      var $nextImg = document.querySelector($currentImg.closest("div").nextElementSibling.querySelector("img")); // The next img in the gallery.
+
+      if ($nextImg.length > 0) {
+        // If there is a next img, display it.
+        document.querySelector("#overlay img").attr("src", $nextImg.attr("src"));
+      } else {
+        // Otherwise, if you've reached the end, loop back to the first img.
+        document.querySelector("#overlay img").attr("src", document.querySelector($images[0]).attr("src"));
+      }
+    });
+  });
+
+  //Stop buttons from hiding the overlay
+  document.querySelector("#overlay .btn").click(function (event) {
+    event.stopPropagation();
+    document.querySelector(this).focus();
+  });
+
+  //Hide
+  $overlay.click(function () {
+    $overlay.hide();
+    document.querySelector("#overlay .btn").hide();
+  });
+});
+
+      </script>
+</body>
+</html>
