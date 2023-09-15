@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula 10 Flexbox</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #000;
+    }
+    
+    .flexivel {
+      display: flex;      
+    }
+
+    .container {
+      max-width: 600px;
+      height: 400px;
+      margin: 0 auto;
+      border: 1px solid #000;
+      /* flex-direction: row; */
+      /* flex-wrap: wrap; */
+      /* flex-wrap: wrap-reverse; */
+      flex-flow: row wrap;
+      justify-content: center;  /* Eixo principal*/
+      /*align-items: stretch;          /* Eixo secundário */
+      align-content: space-between;
+    }
+    
+    .item {
+      margin: 5px;
+      padding: 5px;
+      background: #447;
+      text-align: center;
+      font-size: 1em;
+      color: #fff; 
+    }
+    
+    .tam1{
+      flex-grow: 1;
+    }
+
+    .tam2{
+      flex-grow: 2;
+    }
+
+    .tam3{
+      flex-grow: 3;
+    }
+
+    .basea{
+      flex-basis: auto;
+    }
+
+    .base0{
+      flex-basis: 0;
+    }
+    .base1{
+      flex-basis: 1;
+    }
+    .base2{
+      flex-basis: 2;
+    }
+
+    .ordem0 {
+      order: 0;
+    }
+
+    .ordem1 {
+      order: 1;
+    }
+
+    .ordem2 {
+      order: 2;
+    }
+
+    .ordem3 {
+      order: 3;
+    }
+
+    p {
+      text-align: center;
+      margin: 25px 0 0 0 ;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container flexivel">
+    <div class="item tam1 base0 ordem3"> Div numero 1</div>
+    <div class="item tam1 base0 ordem1"> Div numero 2</div>
+    <div class="item tam1 base0 ordem2"> Div numero 3</div>
+    <div class="item tam1 base0 ordem0"> Div numero 4</div>
+    <!-- <div class="item"> Div numero 5</div>
+    <div class="item"> Div numero 6</div> 
+    <div class="item"> Div numero 7</div> 
+    <div class="item"> Div numero 8</div> 
+    <div class="item"> Div numero 9</div> 
+    <div class="item"> Div numero 10</div> -->
+  </div>
+</body>
+</html>
