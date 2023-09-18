@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 05 GridLayout</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #000;
+      }
+
+      .header {
+        grid-area: header;
+      }
+
+      .main {
+        grid-area: main;
+      }
+
+      .side{
+        grid-area: side;
+      }
+
+      .footer{
+        grid-area: footer;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header header header header"
+        "main main . side"
+        "footer footer footer footer ";
+
+      }
+
+      .item {
+        background-color: #048;
+        color: #fff;
+        border: 1px solid black;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item header">Div numero 1</div>
+      <div class="item main">Div numero 2</div>
+      <div class="item side">Div numero 3</div>
+      <div class="item footer">Div numero 4</div>
+    </div>
+  </body>
+</html>
